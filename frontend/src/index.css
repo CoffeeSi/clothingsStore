@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+:root {
+  font-family: 'Beatrice Deck', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  /* line-height: 1.5; */
+  font-weight: medium;
+}
+
+.panels {
+  li {
+    font-size: 16px;
+    color: white;
+    background-color: black;
+
+    padding: 12px;
+    border-radius: 28px;
+  }
+}
