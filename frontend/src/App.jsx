@@ -1,30 +1,52 @@
-
+import Category from "./components/Category";
+import Header from "./components/Header";
+import ProductBox from "./components/ProductBox";
 
 function App() {
 
   return (
     <>
-      <div class="header w-full flex h-24 items-center">
-        <div className="nav flex">
-          <ul className="flex gap-8 pl-24 grow-1">
-            <li><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0" width="30px" height="30px" viewBox="0 0 30 30">
-              <path d="M 3 7 A 1.0001 1.0001 0 1 0 3 9 L 27 9 A 1.0001 1.0001 0 1 0 27 7 L 3 7 z M 3 14 A 1.0001 1.0001 0 1 0 3 16 L 27 16 A 1.0001 1.0001 0 1 0 27 14 L 3 14 z M 3 21 A 1.0001 1.0001 0 1 0 3 23 L 27 23 A 1.0001 1.0001 0 1 0 27 21 L 3 21 z"></path>
-              </svg></li>
-            <li>Home</li>
-            <li>Collections</li>
-            <li>New</li>
-          </ul>
+      <Header />
+      <div className="main flex flex-nowrap pl-24 pr-24">
+        <div className="filters shrink-0 basis-[300px]">
+          <div className="font-bold">Filters</div>
+          <div className="pt-4"></div>
+          <div className="font-bold text-sm">Size</div>
+          <div className="sizes flex gap-1">
+            <a className="border w-8 pt-1 pb-1 text-[16px] font-medium text-center" href="#">XS</a>
+            <a className="border w-8 pt-1 pb-1 text-[16px] font-medium text-center" href="#">S</a>
+            <a className="border w-8 pt-1 pb-1 text-[16px] font-medium text-center" href="#">M</a>
+            <a className="border w-8 pt-1 pb-1 text-[16px] font-medium text-center" href="#">L</a>
+            <a className="border w-8 pt-1 pb-1 text-[16px] font-medium text-center" href="#">XL</a>
+          </div>
         </div>
-        <div className="logo flex justify-center grow-4">Clothes</div>
-        <div className="panels flex flex-row-reverse pr-24 grow-1">
-          <ul className="flex gap-8 items-center">
-            <li><img class="rotate-315" width="24px" src="./src/assets/heart.png"></img></li>
-            <li><a href="">Cart</a></li>
-            <li><img width="24px" src="./src/assets/profile.png"></img></li>
-          </ul>
+        <div className="products shrink-0">
+          <div className="path text-[14px] font-thin">Home/<b>Products</b></div>
+          <div className="label text-[24px] font-bold">Products</div>
+          <div className="search-cat flex gap-8">
+            <div className="search">
+              <img className="absolute pl-2 pt-2 z-0" src="./src/assets/search.svg"></img>
+              <input className="bg-[#D9D9D9] h-10 not-read-only: pl-8 rounded-sm" placeholder="Search" type="text"></input>
+            </div>
+            <div className="categories grid grid-rows-2 grid-flow-col-dense gap-x-2 gap-y-0.5">
+              <Category text="NEW" />
+              <Category text="BEST SELLERS" />
+              <Category text="SHIRTS" />
+              <Category text="T-SHIRTS" />
+              <Category text="POLO SHIRTS" />
+              <Category text="JEANS" />
+              <Category text="SHORTS" />
+              <Category text="JACKETS" />
+            </div>
+          </div>
+          <div className="pt-8"></div>
+          <div className="product-grid flex gap-8">
+            <ProductBox title="Minecraft sweatshirt" price="49.99" a="1.jpg"/>
+            <ProductBox title="Persian Cat sweatshirt" price="89.99" a="2.png"/>
+            <ProductBox title="Lana Del Rey sweatshirt" price="9.99" a="3.png"/>
+          </div>
         </div>
       </div>
-      <div className="main"></div>
       
     </>
   )
