@@ -1,10 +1,6 @@
-interface ProductProps {
-  title: string;
-  price: string;
-  a: string;
-}
+import type { ProductProps } from "./ProductBox.types"
 
-function ProductBox(props: ProductProps) {
+export const ProductBox = (props: ProductProps) => {
 
   return (
     <>

@@ -1,4 +1,4 @@
-function Header() {
+export const Header = () => {
 
   return (
     <>
@@ -25,5 +25,3 @@ function Header() {
     </>
   )
 }
-
-export default Header
