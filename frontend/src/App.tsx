@@ -1,13 +1,13 @@
-import { Header } from "@/components/layout/Header";
+import { BrowserRouter } from "react-router-dom";
+import { AppRoutes } from "@/routes";
 
 function App() {
 
   return (
-    <>
-      <Header />
-      
-    </>
-  )
+    <BrowserRouter>
+      <AppRoutes />
+    </BrowserRouter>
+  );
 }
 
 export default App;
